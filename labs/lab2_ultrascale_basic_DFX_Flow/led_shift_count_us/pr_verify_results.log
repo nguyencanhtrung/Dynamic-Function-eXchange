@@ -1,0 +1,77 @@
+Command: pr_verify -full_check -initial ./Implement/Config_shift_left_count_down_import/top_route_design.dcp -additional ./Implement/Config_shift_right_count_up_implement/top_route_design.dcp
+Command: open_checkpoint ./Implement/Config_shift_left_count_down_import/top_route_design.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 11508 ; free virtual = 33774
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 11505 ; free virtual = 33772
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Constraints 18-4422] SNAPPING_MODE is set so implementation will use the DERIVED_RANGES which may be different then the GRID_RANGES.
+WARNING: [Constraints 18-4434] Global Clock Buffer 'U0_clocks/clkf_buf' is LOCed to site 'BUFGCE_X1Y49'. Using a LOC constraint to assign the placement of a Global Clock Buffer can result in sub-optimal placement results.
+Resolution: Remove the LOC constraint and use the CLOCK_REGION constraint to assign a Global Clock Buffer to a CLOCK_REGION.
+WARNING: [Constraints 18-4434] Global Clock Buffer 'U0_clocks/clkout1_buf' is LOCed to site 'BUFGCE_X1Y48'. Using a LOC constraint to assign the placement of a Global Clock Buffer can result in sub-optimal placement results.
+Resolution: Remove the LOC constraint and use the CLOCK_REGION constraint to assign a Global Clock Buffer to a CLOCK_REGION.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 11264 ; free virtual = 33675
+Restored from archive | CPU: 0.050000 secs | Memory: 1.132835 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 11264 ; free virtual = 33675
+WARNING: [Constraints 18-4434] Global Clock Buffer 'U0_clocks/clkf_buf' is LOCed to site 'BUFGCE_X1Y49'. Using a LOC constraint to assign the placement of a Global Clock Buffer can result in sub-optimal placement results.
+Resolution: Remove the LOC constraint and use the CLOCK_REGION constraint to assign a Global Clock Buffer to a CLOCK_REGION.
+WARNING: [Constraints 18-4434] Global Clock Buffer 'U0_clocks/clkout1_buf' is LOCed to site 'BUFGCE_X1Y48'. Using a LOC constraint to assign the placement of a Global Clock Buffer can result in sub-optimal placement results.
+Resolution: Remove the LOC constraint and use the CLOCK_REGION constraint to assign a Global Clock Buffer to a CLOCK_REGION.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 11264 ; free virtual = 33675
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2022.2 (64-bit) build 3671981
+OpenCheckpoint Checksum | Checksum: 1806a4cf7
+----- Checksum: PlaceDB: 5e0bee0e ShapeSum: 826098ff RouteDB: 9ffdc5ea 
+INFO: [Vivado 12-3501] pr_verify ./Implement/Config_shift_left_count_down_import/top_route_design.dcp ./Implement/Config_shift_right_count_up_implement/top_route_design.dcp
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 11252 ; free virtual = 33664
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Constraints 18-4422] SNAPPING_MODE is set so implementation will use the DERIVED_RANGES which may be different then the GRID_RANGES.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 10944 ; free virtual = 33402
+Restored from archive | CPU: 0.050000 secs | Memory: 1.145348 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 10944 ; free virtual = 33401
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 10942 ; free virtual = 33402
+INFO: [Project 1-604] Checkpoint was created with Vivado v2022.2 (64-bit) build 3671981
+INFO: [Constraints 18-1020] PR Verify Summary:
+DCP1: ./Implement/Config_shift_left_count_down_import/top_route_design.dcp
+  Number of reconfigurable modules compared = 2
+  Number of partition pins compared         = 24
+  Number of static tiles compared           = 6355
+  Number of static sites compared           = 19
+  Number of static cells compared           = 56
+  Number of static routed nodes compared    = 936
+  Number of static routed pips compared     = 863
+
+DCP2: ./Implement/Config_shift_right_count_up_implement/top_route_design.dcp
+  Number of reconfigurable modules compared = 2
+  Number of partition pins compared         = 24
+  Number of static tiles compared           = 6355
+  Number of static sites compared           = 19
+  Number of static cells compared           = 56
+  Number of static routed nodes compared    = 936
+  Number of static routed pips compared     = 863
+INFO: [Vivado 12-3253] PR_VERIFY: check points ./Implement/Config_shift_left_count_down_import/top_route_design.dcp and ./Implement/Config_shift_right_count_up_implement/top_route_design.dcp are compatible

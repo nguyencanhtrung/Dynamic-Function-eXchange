@@ -1,0 +1,30 @@
+Command: open_checkpoint ./Implement/Config_shift_right_count_up_implement/top_route_design.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4128.645 ; gain = 0.000 ; free physical = 10097 ; free virtual = 32744
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4128.645 ; gain = 0.000 ; free physical = 10094 ; free virtual = 32742
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Constraints 18-4422] SNAPPING_MODE is set so implementation will use the DERIVED_RANGES which may be different then the GRID_RANGES.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4128.645 ; gain = 0.000 ; free physical = 9790 ; free virtual = 32440
+Restored from archive | CPU: 0.050000 secs | Memory: 1.144958 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4128.645 ; gain = 0.000 ; free physical = 9788 ; free virtual = 32438
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4128.645 ; gain = 0.000 ; free physical = 9786 ; free virtual = 32436
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2022.2 (64-bit) build 3671981
+OpenCheckpoint Checksum | Checksum: 1030c04d2
+----- Checksum: PlaceDB: 58ddde3d ShapeSum: 4605b786 RouteDB: 64286f0f 

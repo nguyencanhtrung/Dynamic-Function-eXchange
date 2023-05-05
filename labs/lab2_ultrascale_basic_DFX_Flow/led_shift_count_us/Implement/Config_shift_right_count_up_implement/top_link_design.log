@@ -1,0 +1,22 @@
+Command: link_design -mode default -reconfig_partitions {inst_shift inst_count} -part xcku040-ffva1156-2-e -top top
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint '/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Synth/count_up/count_synth.dcp' for cell 'inst_count'
+INFO: [Project 1-454] Reading design checkpoint '/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Synth/shift_right/shift_synth.dcp' for cell 'inst_shift'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3207.156 ; gain = 0.000 ; free physical = 12908 ; free virtual = 34883
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/xdc/top_kcu105.xdc]
+INFO: [Constraints 18-4422] SNAPPING_MODE is set so implementation will use the DERIVED_RANGES which may be different then the GRID_RANGES. [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/xdc/top_kcu105.xdc:37]
+Finished Parsing XDC File [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/xdc/top_kcu105.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3207.156 ; gain = 0.000 ; free physical = 12682 ; free virtual = 34711
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+104 Infos, 7 Warnings, 2 Critical Warnings and 0 Errors encountered.
+link_design completed successfully

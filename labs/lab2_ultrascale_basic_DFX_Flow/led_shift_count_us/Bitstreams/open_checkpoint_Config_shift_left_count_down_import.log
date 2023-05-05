@@ -1,0 +1,38 @@
+Command: open_checkpoint ./Implement/Config_shift_left_count_down_import/top_route_design.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 11048 ; free virtual = 33515
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 11021 ; free virtual = 33491
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Constraints 18-4422] SNAPPING_MODE is set so implementation will use the DERIVED_RANGES which may be different then the GRID_RANGES.
+WARNING: [Constraints 18-4434] Global Clock Buffer 'U0_clocks/clkf_buf' is LOCed to site 'BUFGCE_X1Y49'. Using a LOC constraint to assign the placement of a Global Clock Buffer can result in sub-optimal placement results.
+Resolution: Remove the LOC constraint and use the CLOCK_REGION constraint to assign a Global Clock Buffer to a CLOCK_REGION.
+WARNING: [Constraints 18-4434] Global Clock Buffer 'U0_clocks/clkout1_buf' is LOCed to site 'BUFGCE_X1Y48'. Using a LOC constraint to assign the placement of a Global Clock Buffer can result in sub-optimal placement results.
+Resolution: Remove the LOC constraint and use the CLOCK_REGION constraint to assign a Global Clock Buffer to a CLOCK_REGION.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 10838 ; free virtual = 33312
+Restored from archive | CPU: 0.070000 secs | Memory: 1.142708 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 10830 ; free virtual = 33306
+WARNING: [Constraints 18-4434] Global Clock Buffer 'U0_clocks/clkf_buf' is LOCed to site 'BUFGCE_X1Y49'. Using a LOC constraint to assign the placement of a Global Clock Buffer can result in sub-optimal placement results.
+Resolution: Remove the LOC constraint and use the CLOCK_REGION constraint to assign a Global Clock Buffer to a CLOCK_REGION.
+WARNING: [Constraints 18-4434] Global Clock Buffer 'U0_clocks/clkout1_buf' is LOCed to site 'BUFGCE_X1Y48'. Using a LOC constraint to assign the placement of a Global Clock Buffer can result in sub-optimal placement results.
+Resolution: Remove the LOC constraint and use the CLOCK_REGION constraint to assign a Global Clock Buffer to a CLOCK_REGION.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 10811 ; free virtual = 33290
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2022.2 (64-bit) build 3671981
+OpenCheckpoint Checksum | Checksum: 1806a4cf7
+----- Checksum: PlaceDB: 5e0bee0e ShapeSum: 826098ff RouteDB: 9ffdc5ea 

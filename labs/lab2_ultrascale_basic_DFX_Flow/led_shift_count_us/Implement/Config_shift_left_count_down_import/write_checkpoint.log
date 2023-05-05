@@ -1,0 +1,5 @@
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4008.586 ; gain = 0.000 ; free physical = 11240 ; free virtual = 33507
+INFO: [Common 17-1381] The checkpoint '/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Implement/Config_shift_left_count_down_import/inst_count_count_down_route_design.dcp' has been generated.

@@ -1,0 +1,36 @@
+Command: link_design -mode default -reconfig_partitions {inst_shift inst_count} -part xcku040-ffva1156-2-e -top top
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint '/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Synth/count_down/count_synth.dcp' for cell 'inst_count'
+INFO: [Project 1-454] Reading design checkpoint '/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Synth/shift_left/shift_synth.dcp' for cell 'inst_shift'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11739 ; free virtual = 33965
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Checkpoint/top_static/top_early.xdc]
+Finished Parsing XDC File [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Checkpoint/top_static/top_early.xdc]
+Parsing XDC File [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Checkpoint/top_static/top.xdc]
+INFO: [Constraints 18-4422] SNAPPING_MODE is set so implementation will use the DERIVED_RANGES which may be different then the GRID_RANGES. [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/xdc/top_kcu105.xdc:36]
+Finished Parsing XDC File [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Checkpoint/top_static/top.xdc]
+Parsing XDC File [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Checkpoint/top_static/top_late.xdc]
+Finished Parsing XDC File [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Checkpoint/top_static/top_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11724 ; free virtual = 33951
+Restored from archive | CPU: 0.040000 secs | Memory: 1.052422 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11724 ; free virtual = 33951
+WARNING: [Constraints 18-4434] Global Clock Buffer 'U0_clocks/clkf_buf' is LOCed to site 'BUFGCE_X1Y49'. Using a LOC constraint to assign the placement of a Global Clock Buffer can result in sub-optimal placement results.
+Resolution: Remove the LOC constraint and use the CLOCK_REGION constraint to assign a Global Clock Buffer to a CLOCK_REGION.
+WARNING: [Constraints 18-4434] Global Clock Buffer 'U0_clocks/clkout1_buf' is LOCed to site 'BUFGCE_X1Y48'. Using a LOC constraint to assign the placement of a Global Clock Buffer can result in sub-optimal placement results.
+Resolution: Remove the LOC constraint and use the CLOCK_REGION constraint to assign a Global Clock Buffer to a CLOCK_REGION.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11723 ; free virtual = 33951
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+212 Infos, 14 Warnings, 2 Critical Warnings and 0 Errors encountered.
+link_design completed successfully

@@ -1,0 +1,248 @@
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku040'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11523 ; free virtual = 33775
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 152b4dff7
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11523 ; free virtual = 33775
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11523 ; free virtual = 33775
+WARNING: [Constraints 18-5648] For reconfigurable module inst_count, the top/bottom edges of its PBLOCK pblock_inst_count are aligned with clock regions. With this type of floorplan, it has limited routability at PBLOCK top/bottom edges due to routing containment requirement. The edge tiles (only listed 10) are CLE_M_X1Y240 CLEL_R_X1Y240 CLEL_R_X2Y240 CLE_M_X3Y240 : . Tool will infer PROHIBIT on those tiles to enhancement routability at the edges of PBLOCK. You may also make the PBLOCK not aligned to clock region at top/bottom edges as a solution. Please refer 'Design Consideration' in UG909 for guidelines. 
+WARNING: [Constraints 18-5648] For reconfigurable module inst_shift, the top/bottom edges of its PBLOCK pblock_inst_shift are aligned with clock regions. With this type of floorplan, it has limited routability at PBLOCK top/bottom edges due to routing containment requirement. The edge tiles (only listed 10) are CLE_M_X5Y239 CLEL_R_X5Y239 CLEL_R_X6Y239 : . Tool will infer PROHIBIT on those tiles to enhancement routability at the edges of PBLOCK. You may also make the PBLOCK not aligned to clock region at top/bottom edges as a solution. Please refer 'Design Consideration' in UG909 for guidelines. 
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 17587f9ff
+
+Time (s): cpu = 00:00:00.97 ; elapsed = 00:00:00.7 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11505 ; free virtual = 33756
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 231d57587
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11497 ; free virtual = 33751
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 231d57587
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11497 ; free virtual = 33751
+Phase 1 Placer Initialization | Checksum: 231d57587
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11497 ; free virtual = 33751
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1dc8ea9ed
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11497 ; free virtual = 33751
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 242990230
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11496 ; free virtual = 33750
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 242990230
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11496 ; free virtual = 33750
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 1cefade03
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11388 ; free virtual = 33644
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 0 net or LUT. Breaked 0 LUT, combined 0 existing LUT and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3979.730 ; gain = 0.000 ; free physical = 11399 ; free virtual = 33654
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |              0  |                     0  |           0  |           4  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 1cefade03
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11399 ; free virtual = 33654
+Phase 2.4 Global Placement Core | Checksum: 233427267
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11399 ; free virtual = 33654
+Phase 2 Global Placement | Checksum: 233427267
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11399 ; free virtual = 33654
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 22480ecdb
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11399 ; free virtual = 33654
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1b8bd30d8
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11393 ; free virtual = 33649
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: 287434b29
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11382 ; free virtual = 33637
+
+Phase 3.3.2 DP Optimization
+Phase 3.3.2 DP Optimization | Checksum: 27a4aac7e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11370 ; free virtual = 33626
+
+Phase 3.3.3 Flow Legalize Slice Clusters
+Phase 3.3.3 Flow Legalize Slice Clusters | Checksum: 1f9af62f1
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11372 ; free virtual = 33628
+
+Phase 3.3.4 Slice Area Swap
+
+Phase 3.3.4.1 Slice Area Swap Initial
+Phase 3.3.4.1 Slice Area Swap Initial | Checksum: 1f52fc394
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11362 ; free virtual = 33618
+Phase 3.3.4 Slice Area Swap | Checksum: 1f52fc394
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11359 ; free virtual = 33614
+Phase 3.3 Small Shape DP | Checksum: 14eb19d9b
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11376 ; free virtual = 33632
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 1a10f3060
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11376 ; free virtual = 33632
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: 1a10f3060
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11376 ; free virtual = 33632
+Phase 3 Detail Placement | Checksum: 1a10f3060
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11376 ; free virtual = 33632
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 173851708
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=8.212 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 12fc5af50
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3979.730 ; gain = 0.000 ; free physical = 11432 ; free virtual = 33687
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 2a2884ac3
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3979.730 ; gain = 0.000 ; free physical = 11432 ; free virtual = 33687
+Phase 4.1.1.1 BUFG Insertion | Checksum: 173851708
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11432 ; free virtual = 33687
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=8.212. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 25e6a58a8
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11432 ; free virtual = 33687
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11432 ; free virtual = 33687
+Phase 4.1 Post Commit Optimization | Checksum: 25e6a58a8
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11432 ; free virtual = 33687
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3979.730 ; gain = 0.000 ; free physical = 11435 ; free virtual = 33690
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 33f21544b
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11441 ; free virtual = 33696
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 33f21544b
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11442 ; free virtual = 33696
+Phase 4.3 Placer Reporting | Checksum: 33f21544b
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11442 ; free virtual = 33696
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3979.730 ; gain = 0.000 ; free physical = 11442 ; free virtual = 33696
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11442 ; free virtual = 33696
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 31a2e4a1f
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11442 ; free virtual = 33696
+Ending Placer Task | Checksum: 21c82f9a2
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3979.730 ; gain = 8.004 ; free physical = 11442 ; free virtual = 33696
+INFO: [Common 17-83] Releasing license: Implementation
+272 Infos, 16 Warnings, 2 Critical Warnings and 0 Errors encountered.
+place_design completed successfully

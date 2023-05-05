@@ -1,0 +1,6 @@
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3971.727 ; gain = 0.000 ; free physical = 11488 ; free virtual = 33715
+INFO: [Common 17-1381] The checkpoint '/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Implement/Config_shift_right_count_up_implement/top_static.dcp' has been generated.

@@ -1,0 +1,9 @@
+puts "#HD: Running synthesis for block count_up"
+create_project -in_memory -part xcku040-ffva1156-2-e > ./Synth/count_up/create_project.log
+set_property source_mgmt_mode All [current_project]
+add_files ./Sources/hdl/count_up/count_up.v
+synth_design -mode out_of_context -flatten_hierarchy rebuilt -top count -part xcku040-ffva1156-2-e > ./Synth/count_up/count_synth_design.rds
+write_checkpoint -force ./Synth/count_up/count_synth.dcp > ./Synth/count_up/write_checkpoint.log
+report_utilization -file ./Synth/count_up/count_utilization_synth.rpt > ./Synth/count_up/temp.log
+close_project
+puts "#HD: Synthesis of module count_up complete\n"

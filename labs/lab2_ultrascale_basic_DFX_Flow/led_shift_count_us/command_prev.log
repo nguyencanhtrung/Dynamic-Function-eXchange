@@ -1,0 +1,61 @@
+file mkdir ./Synth
+file delete -force ./Synth/Static
+file mkdir ./Synth/Static
+puts "#HD: Running synthesis for block Static"
+create_project -in_memory -part xcku040-ffva1156-2-e > ./Synth/Static/create_project.log
+set_property source_mgmt_mode All [current_project]
+add_files ./Sources/hdl/top/top.v
+add_files ./Sources/hdl/top/clocks.v
+synth_design -mode default -flatten_hierarchy rebuilt -top top -part xcku040-ffva1156-2-e > ./Synth/Static/top_synth_design.rds
+write_checkpoint -force ./Synth/Static/top_synth.dcp > ./Synth/Static/write_checkpoint.log
+report_utilization -file ./Synth/Static/top_utilization_synth.rpt > ./Synth/Static/temp.log
+close_project
+puts "#HD: Synthesis of module Static complete\n"
+file mkdir ./Synth
+file delete -force ./Synth/count_up
+file mkdir ./Synth/count_up
+puts "#HD: Running synthesis for block count_up"
+create_project -in_memory -part xcku040-ffva1156-2-e > ./Synth/count_up/create_project.log
+set_property source_mgmt_mode All [current_project]
+add_files ./Sources/hdl/count_up/count_up.v
+synth_design -mode out_of_context -flatten_hierarchy rebuilt -top count -part xcku040-ffva1156-2-e > ./Synth/count_up/count_synth_design.rds
+write_checkpoint -force ./Synth/count_up/count_synth.dcp > ./Synth/count_up/write_checkpoint.log
+report_utilization -file ./Synth/count_up/count_utilization_synth.rpt > ./Synth/count_up/temp.log
+close_project
+puts "#HD: Synthesis of module count_up complete\n"
+file mkdir ./Synth
+file delete -force ./Synth/count_down
+file mkdir ./Synth/count_down
+puts "#HD: Running synthesis for block count_down"
+create_project -in_memory -part xcku040-ffva1156-2-e > ./Synth/count_down/create_project.log
+set_property source_mgmt_mode All [current_project]
+add_files ./Sources/hdl/count_down/count_down.v
+synth_design -mode out_of_context -flatten_hierarchy rebuilt -top count -part xcku040-ffva1156-2-e > ./Synth/count_down/count_synth_design.rds
+write_checkpoint -force ./Synth/count_down/count_synth.dcp > ./Synth/count_down/write_checkpoint.log
+report_utilization -file ./Synth/count_down/count_utilization_synth.rpt > ./Synth/count_down/temp.log
+close_project
+puts "#HD: Synthesis of module count_down complete\n"
+file mkdir ./Synth
+file delete -force ./Synth/shift_right
+file mkdir ./Synth/shift_right
+puts "#HD: Running synthesis for block shift_right"
+create_project -in_memory -part xcku040-ffva1156-2-e > ./Synth/shift_right/create_project.log
+set_property source_mgmt_mode All [current_project]
+add_files ./Sources/hdl/shift_right/shift_right.v
+synth_design -mode out_of_context -flatten_hierarchy rebuilt -top shift -part xcku040-ffva1156-2-e > ./Synth/shift_right/shift_synth_design.rds
+write_checkpoint -force ./Synth/shift_right/shift_synth.dcp > ./Synth/shift_right/write_checkpoint.log
+report_utilization -file ./Synth/shift_right/shift_utilization_synth.rpt > ./Synth/shift_right/temp.log
+close_project
+puts "#HD: Synthesis of module shift_right complete\n"
+file mkdir ./Synth
+file delete -force ./Synth/shift_left
+file mkdir ./Synth/shift_left
+puts "#HD: Running synthesis for block shift_left"
+create_project -in_memory -part xcku040-ffva1156-2-e > ./Synth/shift_left/create_project.log
+set_property source_mgmt_mode All [current_project]
+add_files ./Sources/hdl/shift_left/shift_left.v
+synth_design -mode out_of_context -flatten_hierarchy rebuilt -top shift -part xcku040-ffva1156-2-e > ./Synth/shift_left/shift_synth_design.rds
+write_checkpoint -force ./Synth/shift_left/shift_synth.dcp > ./Synth/shift_left/write_checkpoint.log
+report_utilization -file ./Synth/shift_left/shift_utilization_synth.rpt > ./Synth/shift_left/temp.log
+close_project
+puts "#HD: Synthesis of module shift_left complete\n"

@@ -1,0 +1,9 @@
+puts "#HD: Running synthesis for block shift_right"
+create_project -in_memory -part xcku040-ffva1156-2-e > ./Synth/shift_right/create_project.log
+set_property source_mgmt_mode All [current_project]
+add_files ./Sources/hdl/shift_right/shift_right.v
+synth_design -mode out_of_context -flatten_hierarchy rebuilt -top shift -part xcku040-ffva1156-2-e > ./Synth/shift_right/shift_synth_design.rds
+write_checkpoint -force ./Synth/shift_right/shift_synth.dcp > ./Synth/shift_right/write_checkpoint.log
+report_utilization -file ./Synth/shift_right/shift_utilization_synth.rpt > ./Synth/shift_right/temp.log
+close_project
+puts "#HD: Synthesis of module shift_right complete\n"

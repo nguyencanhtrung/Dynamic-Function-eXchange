@@ -1,0 +1,8 @@
+Command: report_drc -ruledeck bitstream_checks -name top -file ./Implement/Config_shift_right_count_up_implement/reports/top_drc_bitstream_checks.rpt
+WARNING: [Vivado_Tcl 2-1291] -name option used when not in GUI mode. A DRC tab will not be created, but the results will be stored for use with 'get_drc_violations -name top'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Implement/Config_shift_right_count_up_implement/reports/top_drc_bitstream_checks.rpt.
+report_drc completed successfully

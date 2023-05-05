@@ -1,0 +1,10 @@
+puts "#HD: Running synthesis for block Static"
+create_project -in_memory -part xcku040-ffva1156-2-e > ./Synth/Static/create_project.log
+set_property source_mgmt_mode All [current_project]
+add_files ./Sources/hdl/top/top.v
+add_files ./Sources/hdl/top/clocks.v
+synth_design -mode default -flatten_hierarchy rebuilt -top top -part xcku040-ffva1156-2-e > ./Synth/Static/top_synth_design.rds
+write_checkpoint -force ./Synth/Static/top_synth.dcp > ./Synth/Static/write_checkpoint.log
+report_utilization -file ./Synth/Static/top_utilization_synth.rpt > ./Synth/Static/temp.log
+close_project
+puts "#HD: Synthesis of module Static complete\n"

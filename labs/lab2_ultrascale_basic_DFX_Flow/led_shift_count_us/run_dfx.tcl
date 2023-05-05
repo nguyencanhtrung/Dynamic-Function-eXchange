@@ -9,9 +9,9 @@
 ####flow control (1 = run step , 0 = skip step)
 set run.topSynth       1 ;#synthesize static
 set run.rmSynth        1 ;#synthesize RM variants
-set run.dfxImpl        0 ;#implement each static + RM configuration
-set run.prVerify       0 ;#verify RMs are compatible with static
-set run.writeBitstream 0 ;#generate full and partial bitstreams
+set run.dfxImpl        1 ;#implement each static + RM configuration
+set run.prVerify       1 ;#verify RMs are compatible with static
+set run.writeBitstream 1 ;#generate full and partial bitstreams
 
 ###############################################################
 ### Define target demo board

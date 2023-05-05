@@ -1,0 +1,41 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 27 10:05:08 2023
+| Host         : tesla running 64-bit Ubuntu 20.04.5 LTS
+| Command      : report_drc -ruledeck bitstream_checks -name top -file ./Implement/Config_shift_right_count_up_implement/reports/top_drc_bitstream_checks.rpt
+| Design       : top
+| Device       : xcku040-ffva1156-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: bitstream_checks
+             Max violations: <unlimited>
+             Violations found: 1
++-----------+----------+---------------------------------------------------------+------------+
+| Rule      | Severity | Description                                             | Violations |
++-----------+----------+---------------------------------------------------------+------------+
+| REQP-1766 | Warning  | RAMB36E2_DOx_REG_0_incompatible_with_REGCEx_RSTREGx_use | 1          |
++-----------+----------+---------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+REQP-1766#1 Warning
+RAMB36E2_DOx_REG_0_incompatible_with_REGCEx_RSTREGx_use  
+The RAMB36E2 cell inst_shift/RAMB36_inst has DOA_REG set to 0. The REGCEAREGCE and RSTREGARSTREG pins should not be connected to active signal.
+Related violations: <none>
+
+

@@ -1,0 +1,1405 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Apr 27 09:47:22 2023
+# Process ID: 128596
+# Current directory: /home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us
+# Command line: vivado -mode tcl -source run_dfx.tcl -notrace
+# Log file: /home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/vivado.log
+# Journal file: /home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/vivado.jou
+# Running On: tesla, OS: Linux, CPU Frequency: 3600.000 MHz, CPU Physical cores: 8, Host memory: 50450 MB
+#-----------------------------------------------------------
+source run_dfx.tcl -notrace
+Setting TCL dir to ./Tcl_HD
+INFO: Found part matching xcku040-ffva1156-2-e
+
+#HD: List of modules to be synthesized:
+| ------------ | ------------ | ---------- | --------------------------- |
+| Module       | Module Name  | Top Level  | Options                     |
+| ------------ | ------------ | ---------- | --------------------------- |
+| Static       | top          | 1          | -flatten_hierarchy rebuilt  |
+| ------------ | ------------ | ---------- | --------------------------- |
+| count_up     | count        | 0          | -flatten_hierarchy rebuilt  |
+| ------------ | ------------ | ---------- | --------------------------- |
+| count_down   | count        | 0          | -flatten_hierarchy rebuilt  |
+| ------------ | ------------ | ---------- | --------------------------- |
+| shift_right  | shift        | 0          | -flatten_hierarchy rebuilt  |
+| ------------ | ------------ | ---------- | --------------------------- |
+| shift_left   | shift        | 0          | -flatten_hierarchy rebuilt  |
+| ------------ | ------------ | ---------- | --------------------------- |
+
+#HD: No Configurations set to be implemented
+#HD: Defined Configurations not being implemented:
+	1. Config_shift_left_count_down_import
+	2. Config_shift_right_count_up_implement
+
+
+#HD: Running synthesis for block Static
+	Writing results to: ./Synth/Static
+	Info: No XDC file specified for Static
+	Running synth_design
+Command: synth_design -mode default -flatten_hierarchy rebuilt -top top -part xcku040-ffva1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 128632
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'clkin1', assumed default net type 'wire' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/top/clocks.v:47]
+INFO: [Synth 8-11241] undeclared symbol 'LOCKED', assumed default net type 'wire' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/top/clocks.v:130]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2143.922 ; gain = 386.672 ; free physical = 13064 ; free virtual = 34805
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1728.076; parent = 1466.881; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3152.125; parent = 2143.926; children = 1008.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/top/top.v:58]
+INFO: [Synth 8-6157] synthesizing module 'clocks' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/top/clocks.v:35]
+INFO: [Synth 8-6157] synthesizing module 'IBUFGDS' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71834]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFGDS' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71834]
+INFO: [Synth 8-6157] synthesizing module 'MMCM_ADV' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:80584]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 6.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 5.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 12.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLOCK_HOLD bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCM_ADV' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:80584]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'clocks' (0#1) [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/top/clocks.v:35]
+INFO: [Synth 8-6157] synthesizing module 'shift' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/top/top.v:118]
+INFO: [Synth 8-6155] done synthesizing module 'shift' (0#1) [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/top/top.v:118]
+INFO: [Synth 8-6157] synthesizing module 'count' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/top/top.v:126]
+INFO: [Synth 8-6155] done synthesizing module 'count' (0#1) [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/top/top.v:126]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/top/top.v:58]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2208.891 ; gain = 451.641 ; free physical = 13150 ; free virtual = 34894
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1728.076; parent = 1466.881; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3217.094; parent = 2208.895; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2226.703 ; gain = 469.453 ; free physical = 13142 ; free virtual = 34885
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1728.076; parent = 1466.881; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3234.906; parent = 2226.707; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2243.613 ; gain = 486.363 ; free physical = 13140 ; free virtual = 34883
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1728.076; parent = 1466.881; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3251.816; parent = 2243.617; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2243.613 ; gain = 486.363 ; free physical = 13120 ; free virtual = 34870
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1728.076; parent = 1466.881; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3251.816; parent = 2243.617; children = 1008.199
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2630.051 ; gain = 872.801 ; free physical = 12527 ; free virtual = 34331
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2206.783; parent = 1946.213; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3638.254; parent = 2630.055; children = 1008.199
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2633.020 ; gain = 875.770 ; free physical = 12527 ; free virtual = 34331
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2209.545; parent = 1949.000; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3641.223; parent = 2633.023; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2641.027 ; gain = 883.777 ; free physical = 12524 ; free virtual = 34329
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2210.150; parent = 1949.605; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3649.230; parent = 2641.031; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2641.027 ; gain = 883.777 ; free physical = 12530 ; free virtual = 34338
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2210.357; parent = 1949.812; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3649.230; parent = 2641.031; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2641.027 ; gain = 883.777 ; free physical = 12530 ; free virtual = 34338
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2210.373; parent = 1949.828; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3649.230; parent = 2641.031; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2641.027 ; gain = 883.777 ; free physical = 12530 ; free virtual = 34338
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2210.408; parent = 1949.863; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3649.230; parent = 2641.031; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2641.027 ; gain = 883.777 ; free physical = 12530 ; free virtual = 34338
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2210.408; parent = 1949.863; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3649.230; parent = 2641.031; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2641.027 ; gain = 883.777 ; free physical = 12530 ; free virtual = 34338
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2210.424; parent = 1949.881; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3649.230; parent = 2641.031; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2641.027 ; gain = 883.777 ; free physical = 12530 ; free virtual = 34338
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2210.439; parent = 1949.896; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3649.230; parent = 2641.031; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |shift         |         1|
+|2     |count         |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |count    |     1|
+|2     |shift    |     1|
+|3     |BUFG     |     2|
+|4     |CARRY8   |     5|
+|5     |LUT1     |     1|
+|6     |MMCM_ADV |     1|
+|7     |FDRE     |    35|
+|8     |IBUF     |     1|
+|9     |IBUFGDS  |     1|
+|10    |OBUF     |     8|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------+-------+------+
+|      |Instance    |Module |Cells |
++------+------------+-------+------+
+|1     |top         |       |    62|
+|2     |  U0_clocks |clocks |     4|
++------+------------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2641.027 ; gain = 883.777 ; free physical = 12529 ; free virtual = 34337
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2210.549; parent = 1950.006; children = 261.195
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3649.230; parent = 2641.031; children = 1008.199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2641.027 ; gain = 883.777 ; free physical = 12537 ; free virtual = 34345
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2641.035 ; gain = 883.777 ; free physical = 12537 ; free virtual = 34345
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2646.965 ; gain = 0.000 ; free physical = 12635 ; free virtual = 34445
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'count' instantiated as 'inst_count' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/top/top.v:97]
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'shift' instantiated as 'inst_shift' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/top/top.v:89]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2690.621 ; gain = 0.000 ; free physical = 12575 ; free virtual = 34393
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  BUFG => BUFGCE: 2 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  MMCM_ADV => MMCME3_ADV: 1 instance 
+
+Synth Design complete, checksum: 3035fc7d
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 1 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2690.621 ; gain = 965.191 ; free physical = 12777 ; free virtual = 34595
+INFO: [Common 17-1381] The checkpoint '/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Synth/Static/top_synth.dcp' has been generated.
+#HD: Synthesis of module Static complete
+
+#HD: Running synthesis for block count_up
+	Writing results to: ./Synth/count_up
+	Info: No XDC file specified for count_up
+	Running synth_design
+Command: synth_design -mode out_of_context -flatten_hierarchy rebuilt -top count -part xcku040-ffva1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2815.527 ; gain = 68.875 ; free physical = 12398 ; free virtual = 34214
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3823.730; parent = 2815.531; children = 1008.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'count' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/count_up/count_up.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'count' (0#1) [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/count_up/count_up.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2882.496 ; gain = 135.844 ; free physical = 12492 ; free virtual = 34305
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3890.699; parent = 2882.500; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2897.340 ; gain = 150.688 ; free physical = 12492 ; free virtual = 34305
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3905.543; parent = 2897.344; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2905.344 ; gain = 158.691 ; free physical = 12492 ; free virtual = 34305
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3913.547; parent = 2905.348; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2913.352 ; gain = 166.699 ; free physical = 12482 ; free virtual = 34296
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3921.555; parent = 2913.355; children = 1008.199
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2929.367 ; gain = 182.715 ; free physical = 12485 ; free virtual = 34302
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3937.570; parent = 2929.371; children = 1008.199
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2929.367 ; gain = 182.715 ; free physical = 12483 ; free virtual = 34299
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3937.570; parent = 2929.371; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2929.367 ; gain = 182.715 ; free physical = 12479 ; free virtual = 34296
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3937.570; parent = 2929.371; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2929.367 ; gain = 182.715 ; free physical = 12479 ; free virtual = 34296
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3937.570; parent = 2929.371; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2929.367 ; gain = 182.715 ; free physical = 12479 ; free virtual = 34296
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3937.570; parent = 2929.371; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2929.367 ; gain = 182.715 ; free physical = 12479 ; free virtual = 34296
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3937.570; parent = 2929.371; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2929.367 ; gain = 182.715 ; free physical = 12479 ; free virtual = 34296
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3937.570; parent = 2929.371; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2929.367 ; gain = 182.715 ; free physical = 12479 ; free virtual = 34296
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3937.570; parent = 2929.371; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2929.367 ; gain = 182.715 ; free physical = 12479 ; free virtual = 34296
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3937.570; parent = 2929.371; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     4|
+|2     |LUT1   |     2|
+|3     |LUT2   |     1|
+|4     |LUT3   |     1|
+|5     |LUT4   |     1|
+|6     |LUT5   |     1|
+|7     |LUT6   |     4|
+|8     |FDRE   |    29|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2929.367 ; gain = 182.715 ; free physical = 12479 ; free virtual = 34296
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2343.593; parent = 2084.477; children = 259.116
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3937.570; parent = 2929.371; children = 1008.199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2929.367 ; gain = 182.715 ; free physical = 12481 ; free virtual = 34298
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2929.375 ; gain = 182.715 ; free physical = 12481 ; free virtual = 34298
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2929.375 ; gain = 0.000 ; free physical = 12473 ; free virtual = 34290
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2932.336 ; gain = 0.000 ; free physical = 12547 ; free virtual = 34364
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 24537fda
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 2 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2932.336 ; gain = 185.688 ; free physical = 12761 ; free virtual = 34578
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Synth/count_up/count_synth.dcp' has been generated.
+#HD: Synthesis of module count_up complete
+
+#HD: Running synthesis for block count_down
+	Writing results to: ./Synth/count_down
+	Info: No XDC file specified for count_down
+	Running synth_design
+Command: synth_design -mode out_of_context -flatten_hierarchy rebuilt -top count -part xcku040-ffva1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3046.988 ; gain = 0.000 ; free physical = 12275 ; free virtual = 34099
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3981.090; parent = 2972.891; children = 1008.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'count' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/count_down/count_down.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'count' (0#1) [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/count_down/count_down.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3046.988 ; gain = 0.000 ; free physical = 12362 ; free virtual = 34187
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.059; parent = 3038.859; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3056.668 ; gain = 9.680 ; free physical = 12364 ; free virtual = 34188
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4064.871; parent = 3056.672; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3056.668 ; gain = 9.680 ; free physical = 12364 ; free virtual = 34188
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4064.871; parent = 3056.672; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3056.668 ; gain = 9.680 ; free physical = 12355 ; free virtual = 34180
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4064.871; parent = 3056.672; children = 1008.199
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3072.684 ; gain = 25.695 ; free physical = 12356 ; free virtual = 34189
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.887; parent = 3072.688; children = 1008.199
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3072.684 ; gain = 25.695 ; free physical = 12356 ; free virtual = 34189
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.887; parent = 3072.688; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3072.684 ; gain = 25.695 ; free physical = 12356 ; free virtual = 34189
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.887; parent = 3072.688; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3072.684 ; gain = 25.695 ; free physical = 12347 ; free virtual = 34174
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.887; parent = 3072.688; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3072.684 ; gain = 25.695 ; free physical = 12347 ; free virtual = 34174
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.887; parent = 3072.688; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3072.684 ; gain = 25.695 ; free physical = 12347 ; free virtual = 34174
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.887; parent = 3072.688; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3072.684 ; gain = 25.695 ; free physical = 12347 ; free virtual = 34174
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.887; parent = 3072.688; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3072.684 ; gain = 25.695 ; free physical = 12347 ; free virtual = 34174
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.887; parent = 3072.688; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3072.684 ; gain = 25.695 ; free physical = 12347 ; free virtual = 34174
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.887; parent = 3072.688; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     4|
+|2     |LUT1   |     2|
+|3     |LUT2   |     1|
+|4     |LUT3   |     1|
+|5     |LUT4   |     1|
+|6     |LUT5   |     1|
+|7     |LUT6   |     4|
+|8     |FDRE   |    25|
+|9     |FDSE   |     4|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3072.684 ; gain = 25.695 ; free physical = 12347 ; free virtual = 34174
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2464.776; parent = 2205.777; children = 258.999
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4080.887; parent = 3072.688; children = 1008.199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3072.684 ; gain = 25.695 ; free physical = 12352 ; free virtual = 34179
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3072.691 ; gain = 25.695 ; free physical = 12352 ; free virtual = 34179
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3072.691 ; gain = 0.000 ; free physical = 12344 ; free virtual = 34171
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3087.527 ; gain = 0.000 ; free physical = 12409 ; free virtual = 34236
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: d903f398
+INFO: [Common 17-83] Releasing license: Synthesis
+59 Infos, 3 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 3087.527 ; gain = 40.539 ; free physical = 12618 ; free virtual = 34445
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Synth/count_down/count_synth.dcp' has been generated.
+#HD: Synthesis of module count_down complete
+
+#HD: Running synthesis for block shift_right
+	Writing results to: ./Synth/shift_right
+	Info: No XDC file specified for shift_right
+	Running synth_design
+Command: synth_design -mode out_of_context -flatten_hierarchy rebuilt -top shift -part xcku040-ffva1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12274 ; free virtual = 34099
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'shift' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/shift_right/shift_right.v:24]
+INFO: [Synth 8-6157] synthesizing module 'RAMB36' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:129335]
+	Parameter DOA_REG bound to: 0 - type: integer 
+	Parameter DOB_REG bound to: 0 - type: integer 
+	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_08 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_09 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_0A bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_0B bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_0C bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_0D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_0E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_0F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_00 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_01 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_02 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_03 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_04 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_05 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_06 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_07 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_08 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_09 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_0A bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_0B bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_0C bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_0D bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_0E bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_0F bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_10 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_11 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_12 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_13 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_14 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_15 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_16 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_17 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_18 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_19 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_1A bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_1B bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_1C bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_1D bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_1E bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_1F bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_20 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_21 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_22 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_23 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_24 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_25 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_26 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_27 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_28 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_29 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_2A bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_2B bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_2C bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_2D bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_2E bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_2F bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_30 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_31 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_32 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_33 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_34 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_35 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_36 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_37 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_38 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_39 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_3A bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_3B bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_3C bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_3D bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_3E bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_3F bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_40 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_41 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_42 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_43 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_44 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_45 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_46 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_47 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_48 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_49 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_4A bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_4B bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_4C bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_4D bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_4E bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_4F bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_50 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_51 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_52 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_53 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_54 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_55 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_56 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_57 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_58 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_59 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_5A bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_5B bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_5C bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_5D bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_5E bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_5F bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_60 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_61 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_62 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_63 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_64 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_65 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_66 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_67 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_68 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_69 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_6A bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_6B bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_6C bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_6D bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_6E bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_6F bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_70 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_71 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_72 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_73 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_74 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_75 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_76 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_77 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_78 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_79 bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_7A bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_7B bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_7C bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_7D bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_7E bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_7F bound to: 256'b0000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001000010000000010000000010000000010000100000000100000000100000000100001000000001000000001000000001 
+	Parameter INIT_A bound to: 36'b000000000000000000000000000000000000 
+	Parameter INIT_B bound to: 36'b000000000000000000000000000000000000 
+	Parameter RAM_EXTENSION_A bound to: NONE - type: string 
+	Parameter RAM_EXTENSION_B bound to: NONE - type: string 
+	Parameter READ_WIDTH_A bound to: 9 - type: integer 
+	Parameter READ_WIDTH_B bound to: 0 - type: integer 
+	Parameter SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter SIM_MODE bound to: SAFE - type: string 
+	Parameter SRVAL_A bound to: 36'b000000000000000000000000000000000000 
+	Parameter SRVAL_B bound to: 36'b000000000000000000000000000000000000 
+	Parameter WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter WRITE_WIDTH_A bound to: 0 - type: integer 
+	Parameter WRITE_WIDTH_B bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RAMB36' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:129335]
+WARNING: [Synth 8-689] width (4) of port connection 'DOA' does not match port width (32) of module 'RAMB36' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/shift_right/shift_right.v:206]
+INFO: [Synth 8-6155] done synthesizing module 'shift' (0#1) [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/shift_right/shift_right.v:24]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12357 ; free virtual = 34182
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12358 ; free virtual = 34183
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12358 ; free virtual = 34183
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12357 ; free virtual = 34182
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12349 ; free virtual = 34180
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12349 ; free virtual = 34180
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12349 ; free virtual = 34180
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12255 ; free virtual = 34090
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12255 ; free virtual = 34090
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12255 ; free virtual = 34090
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12255 ; free virtual = 34090
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12255 ; free virtual = 34090
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12255 ; free virtual = 34090
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |LUT1   |     1|
+|2     |RAMB36 |     1|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12255 ; free virtual = 34090
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2471.993; parent = 2213.043; children = 258.950
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4103.734; parent = 3095.535; children = 1008.199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12256 ; free virtual = 34091
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12256 ; free virtual = 34091
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12248 ; free virtual = 34083
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12270 ; free virtual = 34106
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  RAMB36 => RAMB36E2: 1 instance 
+
+Synth Design complete, checksum: 492d2a8b
+INFO: [Common 17-83] Releasing license: Synthesis
+76 Infos, 5 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 3175.570 ; gain = 0.000 ; free physical = 12477 ; free virtual = 34316
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Synth/shift_right/shift_synth.dcp' has been generated.
+#HD: Synthesis of module shift_right complete
+
+#HD: Running synthesis for block shift_left
+	Writing results to: ./Synth/shift_left
+	Info: No XDC file specified for shift_left
+	Running synth_design
+Command: synth_design -mode out_of_context -flatten_hierarchy rebuilt -top shift -part xcku040-ffva1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12205 ; free virtual = 34037
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'shift' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/shift_left/shift_left.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RAMB36' [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:129335]
+	Parameter DOA_REG bound to: 0 - type: integer 
+	Parameter DOB_REG bound to: 0 - type: integer 
+	Parameter INITP_00 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_01 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_02 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_03 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_04 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_05 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_06 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_07 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_08 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_09 bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_0A bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_0B bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_0C bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_0D bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_0E bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INITP_0F bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter INIT_00 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_01 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_02 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_03 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_04 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_05 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_06 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_07 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_08 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_09 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_0A bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_0B bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_0C bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_0D bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_0E bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_0F bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_10 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_11 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_12 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_13 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_14 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_15 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_16 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_17 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_18 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_19 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_1A bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_1B bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_1C bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_1D bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_1E bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_1F bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_20 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_21 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_22 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_23 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_24 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_25 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_26 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_27 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_28 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_29 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_2A bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_2B bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_2C bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_2D bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_2E bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_2F bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_30 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_31 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_32 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_33 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_34 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_35 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_36 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_37 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_38 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_39 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_3A bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_3B bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_3C bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_3D bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_3E bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_3F bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_40 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_41 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_42 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_43 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_44 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_45 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_46 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_47 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_48 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_49 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_4A bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_4B bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_4C bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_4D bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_4E bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_4F bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_50 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_51 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_52 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_53 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_54 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_55 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_56 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_57 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_58 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_59 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_5A bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_5B bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_5C bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_5D bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_5E bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_5F bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_60 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_61 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_62 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_63 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_64 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_65 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_66 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_67 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_68 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_69 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_6A bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_6B bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_6C bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_6D bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_6E bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_6F bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_70 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_71 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_72 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_73 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_74 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_75 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_76 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_77 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_78 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_79 bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_7A bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_7B bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_7C bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_7D bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_7E bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_7F bound to: 256'b0000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000000000010000001000000100000010000000000100000010000001000000100000000001000000100000010000001000 
+	Parameter INIT_A bound to: 36'b000000000000000000000000000000000000 
+	Parameter INIT_B bound to: 36'b000000000000000000000000000000000000 
+	Parameter RAM_EXTENSION_A bound to: NONE - type: string 
+	Parameter RAM_EXTENSION_B bound to: NONE - type: string 
+	Parameter READ_WIDTH_A bound to: 9 - type: integer 
+	Parameter READ_WIDTH_B bound to: 0 - type: integer 
+	Parameter SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter SIM_MODE bound to: SAFE - type: string 
+	Parameter SRVAL_A bound to: 36'b000000000000000000000000000000000000 
+	Parameter SRVAL_B bound to: 36'b000000000000000000000000000000000000 
+	Parameter WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter WRITE_WIDTH_A bound to: 0 - type: integer 
+	Parameter WRITE_WIDTH_B bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RAMB36' (0#1) [/opt/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:129335]
+WARNING: [Synth 8-689] width (4) of port connection 'DOA' does not match port width (32) of module 'RAMB36' [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/shift_left/shift_left.v:336]
+INFO: [Synth 8-6155] done synthesizing module 'shift' (0#1) [/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Sources/hdl/shift_left/shift_left.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12291 ; free virtual = 34121
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12291 ; free virtual = 34121
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12291 ; free virtual = 34121
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12283 ; free virtual = 34116
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12277 ; free virtual = 34110
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12277 ; free virtual = 34110
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12277 ; free virtual = 34110
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12344 ; free virtual = 34175
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12344 ; free virtual = 34175
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12344 ; free virtual = 34175
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12344 ; free virtual = 34175
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12344 ; free virtual = 34175
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12344 ; free virtual = 34175
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |LUT1   |     1|
+|2     |RAMB36 |     1|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12344 ; free virtual = 34175
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2479.391; parent = 2219.152; children = 260.238
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4115.711; parent = 3107.508; children = 1008.203
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12351 ; free virtual = 34182
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12351 ; free virtual = 34182
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12343 ; free virtual = 34174
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12424 ; free virtual = 34254
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  RAMB36 => RAMB36E2: 1 instance 
+
+Synth Design complete, checksum: 492d2a8b
+INFO: [Common 17-83] Releasing license: Synthesis
+93 Infos, 7 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 3187.543 ; gain = 0.000 ; free physical = 12616 ; free virtual = 34450
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/tesla/workspace/05.Soc/10.studies/03.dfx/labs/lab2_ultrascale_basic_DFX_Flow/led_shift_count_us/Synth/shift_left/shift_synth.dcp' has been generated.
+#HD: Synthesis of module shift_left complete
+
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/au280/es1/1.0/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:au280_es1:part0:1.1 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/au280/es1/1.1/board.xml as part xcu280-fsvh2892-2l-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /opt/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 27 09:53:28 2023...
